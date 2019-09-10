@@ -1,0 +1,2 @@
+https://data.bls.gov/timeseries/LNS14000000
+Unemployement rate, seasonally adjusted
