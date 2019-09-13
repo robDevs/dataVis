@@ -1,6 +1,21 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html>
+	<head>
+  <meta charset="utf-8">
 
+		<style>
+		.regression {
+		  stroke-width: 2px;
+		  stroke: Blue;
+		}
+		.equation {
+			font-size: 12px;
+			margin-top: 10px;
+			text-align: center;
+		}
+		</style>
+
+	</head>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
@@ -42,9 +57,6 @@
     var formatTime = d3.timeFormat("%b");
 
     // Add X axis
-
-
-
     var x = d3.scaleTime()
     	.domain([new Date(2009, 0, 1), new Date(2020, 0, 1)])
       .range([0, width]);
@@ -72,7 +84,12 @@
       .append("svg:title")
   		.text(function(d) { return formatTime(parseTime(d.Date)) + " : " + d.Rate; })
 
-      //alert(parseTime("2019/Mar"))
+      svg.append("line")
+         .attr("class", "regression")
+         .attr("x1", 0)
+         .attr("y1", 43.42)
+         .attr("x2", 586.7599161895279)
+         .attr("y2", 407.211148038);
   })
 
       d3.select("body").append("p").text("Year").style("margin-left","350px").style("margin-top", "0px");
@@ -81,3 +98,4 @@
       d3.select("body").append("em").text("https://data.bls.gov/timeseries/LNS14000000").style("margin-left", "200px");;
 
 </script>
+</html>
