@@ -20,10 +20,13 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz">
-  <h1>
+<div id="main_div">
+  <h1 style="font-size:20px">
     Unemployment Rate from 2009-2019 seasonally adjusted
   </h1>
+  <p>
+    <em>The most recent presidents have made significant progress in lowering the unemployment rate.</em>
+  </p>
   <p>
     Rate/Percent
     <button onclick="showLine()">Show Regresion Line</button>
@@ -37,17 +40,18 @@
       top: 10,
       right: 30,
       bottom: 30,
-      left: 60
+      left: 30
     },
     width = 500 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
 
   // append the svg object to the body of the page
-  var svg = d3.select("#my_dataviz")
+  var svg = d3.select("#main_div")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .style("float", "left")
     .append("g")
     .attr("transform",
       "translate(" + margin.left + "," + margin.top + ")");
@@ -81,24 +85,33 @@
       .append("circle")
       .attr("cx", function(d) { return x(parseTime(d.Date)); })
       .attr("cy", function(d) { return y(d.Rate); })
-      .attr("r", 3)
+      .attr("r", 1.5)
       .style("fill", "#000000")
       .append("svg:title")
   		.text(function(d) { return formatTime(parseTime(d.Date)) + " : " + d.Rate; })
   })
 
-      d3.select("body").append("p").text("Year").style("margin-left","350px").style("margin-top", "0px");
-      d3.select("body").append("em").text("U.S. Bureau of Labor Statistics").style("margin-left", "250px");
+      d3.select("body").append("div").attr("class", "stats").style("border", "2px solid black").style("margin-left","510px").style("width", "200px");
+      d3.select(".stats").append("b").text("Rate Stats").style("margin-left","10px").style("margin-top", "0px");
+      d3.select(".stats").append("br");
+      d3.select(".stats").append("em").text("μ: 4.246").style("margin-left","10px").style("margin-top", "0px");
+      d3.select(".stats").append("br");
+      d3.select(".stats").append("em").text("median: 4.574").style("margin-left","10px").style("margin-top", "0px");
+      d3.select(".stats").append("br");
+      d3.select(".stats").append("em").text("σ: 2.046").style("margin-left","10px").style("margin-top", "0px");
+
+      d3.select("body").append("p").text("Year").style("margin-left","250px").style("margin-top", "0px").style("clear", "both");
+      d3.select("body").append("em").text("U.S. Bureau of Labor Statistics").style("margin-left", "150px");
       d3.select("body").append("br");
-      d3.select("body").append("em").text("https://data.bls.gov/timeseries/LNS14000000").style("margin-left", "200px");;
+      d3.select("body").append("em").text("https://data.bls.gov/timeseries/LNS14000000").style("margin-left", "100px");;
 
       function showLine() {
   			svg.append("line")
          .attr("class", "regression")
          .attr("x1", 0)
-         .attr("y1", 43.42)
-         .attr("x2", 586.7599161895279)
-         .attr("y2", 407.211148038);
+         .attr("y1", 24.54)
+         .attr("x2", 406.8359472242968)
+         .attr("y2", 236.094692557);
 			}
 
       function removeLine() {
