@@ -26,6 +26,8 @@
   </h1>
   <p>
     Rate/Percent
+    <button onclick="showLine()">Show Regresion Line</button>
+    <button onclick="removeLine()">Remove Regresion Line</button>
   </p>
 </div>
 
@@ -83,19 +85,25 @@
       .style("fill", "#000000")
       .append("svg:title")
   		.text(function(d) { return formatTime(parseTime(d.Date)) + " : " + d.Rate; })
-
-      svg.append("line")
-         .attr("class", "regression")
-         .attr("x1", 0)
-         .attr("y1", 43.42)
-         .attr("x2", 586.7599161895279)
-         .attr("y2", 407.211148038);
   })
 
       d3.select("body").append("p").text("Year").style("margin-left","350px").style("margin-top", "0px");
       d3.select("body").append("em").text("U.S. Bureau of Labor Statistics").style("margin-left", "250px");
       d3.select("body").append("br");
       d3.select("body").append("em").text("https://data.bls.gov/timeseries/LNS14000000").style("margin-left", "200px");;
+
+      function showLine() {
+  			svg.append("line")
+         .attr("class", "regression")
+         .attr("x1", 0)
+         .attr("y1", 43.42)
+         .attr("x2", 586.7599161895279)
+         .attr("y2", 407.211148038);
+			}
+
+      function removeLine() {
+      	svg.selectAll(".regression").remove()
+      }
 
 </script>
 </html>
