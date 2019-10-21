@@ -1,0 +1,254 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Montana State Library</origin>
+        <pubdate>20110317</pubdate>
+        <title>Montana 2010 Population Density 1-km grid</title>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Helena, Montana</pubplace>
+          <publish>Montana State Library</publish>
+        </pubinfo>
+        <onlink>ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Census/dens2010.zip</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Population density, in persons per square mile, of Montana from the 2010 Census. This data is a smoothed-over representation of Montana's population density surface, designed to emphasize small areas with high population density. It was derived from U.S. Census Bureau 2010 TIGER files and population counts.
+
+The original data was resampled to a 100-meter grid, smoothed, and the highest resulting density of the 100-meter cells in each 1-kilometer grid cell was assigned to the cell.
+
+When comparing this data set to the similar data set available from NRIS for the 2000 and 1990 Censuses, it is important to realize that the change of population density at a location is likely to be the result of a change in the configuration of the Census Blocks rather than a change in population density. The 2010 Census Block data is available at ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Census/cblock2010.zip.</abstract>
+      <purpose>Display and analysis of population distribution</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2010</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-116.178383</westbc>
+        <eastbc>-103.615608</eastbc>
+        <northbc>49.181257</northbc>
+        <southbc>44.240704</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>society</themekey>
+      </theme>
+      <theme>
+        <themekey>population</themekey>
+        <themekey>census</themekey>
+        <themekey>demographics</themekey>
+      </theme>
+      <place>
+        <placekey>Montana</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Montana State Library provides this product/service for informational purposes only. The Library did not produce it for, nor is it suitable for legal, engineering, or surveying purposes. Consumers of this information should review or consult the primary data and information sources to ascertain the viability of the information for their purposes. The Library provides these data in good faith but does not represent or warrant its accuracy, adequacy, or completeness. In no event shall the Library be liable for any incorrect results or analysis; any direct, indirect, special, or consequential damages to any party; or any lost profits arising out of or in connection with the use or the inability to use the data or the services provided. The Library makes these data and services available as a convenience to the public, and for no other purpose. The Library reserves the right to change or revise published data and/or services at any time.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>MT</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <browse>
+      <browsen>ftp://ftp.geoinfo.msl.mt.gov/Documents/Maps/Thumbnails/20131204_666_thumb.jpg</browsen>
+      <browsed>Thumbnail of Montana 2010 Population Density map</browsed>
+    </browse>
+    <browse>
+      <browsen>ftp://ftp.geoinfo.msl.mt.gov/Documents/Maps/Individual/20131204_666_PopDens2010.jpg</browsen>
+      <browsed>Montana 2010 Population Density map</browsed>
+    </browse>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Population is only known for U.S. Census Bureau Census Block areas, rather than continously, as someone might construe from this data set. The population density for a given location is a number equal to or smaller than the density of the most dense Census Block in the nearest 1000 meters. The actual population density at a given location may be much lower or higher, if the location is in an area farther from or closer to most of the people in a Census Block</attraccr>
+    </attracc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Census Bureau</origin>
+            <origin>Montana State Library</origin>
+            <pubdate>20110316</pubdate>
+            <title>Montana Census Blocks with Population Data, 2010</title>
+            <pubinfo>
+              <pubplace>Helena, MT</pubplace>
+              <publish>Montana State Library</publish>
+            </pubinfo>
+            <onlink>http://apps.msl.mt.gov/Geographic_Information/Data/DataList/datalist_Details.aspx?did={6874ffaa-1e8f-48e5-8029-bad7511ce710}</onlink>
+          </citeinfo>
+        </srccite>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2010</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccontr>The data is a smoothed, rasterized version of this source.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Convert vector Census Block data to 100-meter grid cells based on population density.
+
+ESRI Geoprocessing command:
+PolygonToRaster cblock2010 Density grid1 MAXIMUM_AREA NONE 100</procdesc>
+        <procdate>20110317</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Smooth the data by setting the value of each cell equal to the mean value of the cell and its 80 neighbors:
+
+ESRI Geoprocessing Command:
+FocalStatistics grid1 s2 "Rectangle 9 9 CELL" MEAN DATA</procdesc>
+        <procdate>20110317</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Emphasize high-density areas by assigning each cell the density of the highest of the 80 neighboring cells.
+
+ESRI Geoprocessing Command:
+FocalStatistics s2 s3 "Rectangle 9 9 CELL" MAXIMUM DATA</procdesc>
+        <procdate>20110317</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Resample the data to a 1000-meter grid.
+
+ESRI geoprocessing command:
+Resample s3 Dens2010 1000 BILINEAR</procdesc>
+        <procdate>20110317</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>530</rowcount>
+      <colcount>918</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>State Plane Coordinate System</gridsysn>
+          <spcs>
+            <spcszone>2500</spcszone>
+            <lambertc>
+              <stdparll>45.000000</stdparll>
+              <stdparll>49.000000</stdparll>
+              <longcm>-109.500000</longcm>
+              <latprjo>44.250000</latprjo>
+              <feast>600000.000000</feast>
+              <fnorth>0.000000</fnorth>
+            </lambertc>
+          </spcs>
+        </gridsys>
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>1000.000000</absres>
+            <ordres>1000.000000</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137.000000</semiaxis>
+        <denflat>298.257222</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>MT</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>The Montana State Library provides this product/service for informational purposes only. The Library did not produce it for, nor is it suitable for legal, engineering, or surveying purposes. Consumers of this information should review or consult the primary data and information sources to ascertain the viability of the information for their purposes. The Library provides these data in good faith but does not represent or warrant its accuracy, adequacy, or completeness. In no event shall the Library be liable for any incorrect results or analysis; any direct, indirect, special, or consequential damages to any party; or any lost profits arising out of or in connection with the use or the inability to use the data or the services provided. The Library makes these data and services available as a convenience to the public, and for no other purpose. The Library reserves the right to change or revise published data and/or services at any time.</distliab>
+    <resdesc>Downloadable Data</resdesc>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ESRI Shapefile and GeoTIFF</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Census/dens2010.zip</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20131218</metd>
+    <metrd>20130417</metrd>
+    <metrd>20110317</metrd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>MT</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+  <Esri>
+    <PublishedDocID>{5d01c4b6-a4f9-44cb-b642-0d4c3a54d8a1}</PublishedDocID>
+  </Esri>
+</metadata>

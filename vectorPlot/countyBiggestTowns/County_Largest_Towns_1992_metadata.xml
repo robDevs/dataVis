@@ -1,0 +1,288 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Montana State Library</origin>
+        <pubdate>19921124</pubdate>
+        <title>Largest City in each Montana County</title>
+        <geoform>map</geoform>
+        <pubinfo>
+          <pubplace>Helena, Montana</pubplace>
+          <publish>Montana State Library</publish>
+        </pubinfo>
+        <othercit>The former name of the data set on the NRIS web site was "ct4"</othercit>
+        <onlink>ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/County_Largest_Towns_1992.zip</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Point locations for the largest city in each Montana county, selected from the U.S. Geological Survey Geographic Names Information System.  These are the same as the county seats, except for Madison County, where Ennis, the largest town, is in the layer, but Virginia City, the county seat, is not.
+
+The locations of Circle and Choteau were incorrect in the GNIS data.  These have been corrected.</abstract>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>1988</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>Publication Date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-115.189400</westbc>
+        <eastbc>-104.006599</eastbc>
+        <northbc>48.7501984</northbc>
+        <southbc>45.0396004</southbc>
+      </bounding>
+      <dsgpoly>
+        <dsgpolyo>
+          <gring>-116.0748825073,49.02441787719,-116.0513381958,47.93949127197,-115.7472457885,47.45859146118,-114.6641998291,46.60823059082,-114.424659729,46.61886978149,-114.5483016967,45.60388565063,-114.3186950683,45.43321228027,-113.9458312988,45.58434677124,-113.5072631835,44.86284637451,-112.8395233154,44.31266784668,-110.9373550415,44.44471740722,-110.950553894,44.95633697509,-108.1549987793,44.98777389526,-103.8922653198,44.98892211914,-103.7473602294,49.05199050903,-109.5802764892,49.08559036254,-116.0748825073,49.02441787719</gring>
+        </dsgpolyo>
+      </dsgpoly>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>location</themekey>
+        <themekey>society</themekey>
+      </theme>
+      <theme>
+        <themekey>city</themekey>
+        <themekey>cities</themekey>
+        <themekey>town</themekey>
+        <themekey>county seat</themekey>
+      </theme>
+      <place>
+        <placekey>Montana</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Montana State Library provides this product/service for informational purposes only. The Library did not produce it for, nor is it suitable for legal, engineering, or surveying purposes. Consumers of this information should review or consult the primary data and information sources to ascertain the viability of the information for their purposes. The Library provides these data in good faith but does not represent or warrant its accuracy, adequacy, or completeness. In no event shall the Library be liable for any incorrect results or analysis; any direct, indirect, special, or consequential damages to any party; or any lost profits arising out of or in connection with the use or the inability to use the data or the services provided. The Library makes these data and services available as a convenience to the public, and for no other purpose. The Library reserves the right to change or revise published data and/or services at any time.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>Montana</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <browse>
+      <browsen>ftp://ftp.geoinfo.msl.mt.gov/Documents/Maps/Thumbnails/19940810_565_thumb.jpg</browsen>
+      <browsed>Thumbnal of map showing largest city in each Montana county</browsed>
+    </browse>
+    <browse>
+      <browsen>ftp://ftp.geoinfo.msl.mt.gov/Documents/Maps/Individual/19940810_565_1994_MTLargeCityinCounty.gif</browsen>
+      <browsed>Map showing largest city in each Montana county</browsed>
+    </browse>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>City names are correct.  Latitude and Longitude locations are within the city limits.</attraccr>
+    </attracc>
+    <posacc>
+      <horizpa>
+        <horizpar>Point locations are within the corresponding city limits.</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Geological Survey
+National Mapping Division</origin>
+            <pubdate>1992</pubdate>
+            <title>Geographic Names Information System</title>
+            <geoform>map</geoform>
+            <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+              <publish>U.S. Geologic Survey</publish>
+            </pubinfo>
+          </citeinfo>
+        </srccite>
+        <srcscale>100000</srcscale>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1992</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Publication Date</srccurr>
+        </srctime>
+        <srccitea>gnis</srccitea>
+        <srccontr>The cities in the coverage were selected from this data source.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Convert the GNIS file to an Arc/Info coverage.</procdesc>
+        <srcused>gnis</srcused>
+        <procdate>19920821</procdate>
+        <srcprod>imp1</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>Select the cities from the GNIS data.</procdesc>
+        <srcused>imp1</srcused>
+        <procdate>19921104</procdate>
+        <srcprod>imp2</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>Move the cities of Choteau and Circle to their correct locations.</procdesc>
+        <srcused>imp2</srcused>
+        <procdate>19921124</procdate>
+        <srcprod>fins</srcprod>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Point</sdtstype>
+        <ptvctcnt>56</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>State Plane Coordinate System 1983</gridsysn>
+          <spcs>
+            <spcszone>2500</spcszone>
+            <lambertc>
+              <stdparll>45</stdparll>
+              <stdparll>49</stdparll>
+              <longcm>-109.5</longcm>
+              <latprjo>44.25</latprjo>
+              <feast>600000.00000</feast>
+              <fnorth>0.00000</fnorth>
+            </lambertc>
+          </spcs>
+        </gridsys>
+        <planci>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137</semiaxis>
+        <denflat>298.257</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>County_Largest_Towns_1992.dbf</enttypl>
+        <enttypd>Point Attribute Table</enttypd>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Shapefile sequence number</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>CT4_</attrlabl>
+        <attrdef>Sequence number from original coverage version of the data</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>CT4_ID</attrlabl>
+        <attrdef>ID number from original coverage version of the data</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Name of City</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>LONG</attrlabl>
+        <attrdef>Longitude of city center</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>LAT</attrlabl>
+        <attrdef>Latitude of city center</attrdef>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>MT</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>The Montana State Library provides this product/service for informational purposes only. The Library did not produce it for, nor is it suitable for legal, engineering, or surveying purposes. Consumers of this information should review or consult the primary data and information sources to ascertain the viability of the information for their purposes. The Library provides these data in good faith but does not represent or warrant its accuracy, adequacy, or completeness. In no event shall the Library be liable for any incorrect results or analysis; any direct, indirect, special, or consequential damages to any party; or any lost profits arising out of or in connection with the use or the inability to use the data or the services provided. The Library makes these data and services available as a convenience to the public, and for no other purpose. The Library reserves the right to change or revise published data and/or services at any time.</distliab>
+    <resdesc>Downloadable Data</resdesc>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ESRI Shapefile</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/County_Largest_Towns_1992.zip</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20140110</metd>
+    <metrd>20130417</metrd>
+    <metrd>20040929</metrd>
+    <metrd>19960104</metrd>
+    <metrd>19961005</metrd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Montana State Library</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>PO Box 201800</address>
+          <city>Helena</city>
+          <state>Montana</state>
+          <postal>59620-1800</postal>
+        </cntaddr>
+        <cntvoice>406-444-5354</cntvoice>
+        <cnttdd>406-444-4799</cnttdd>
+        <cntfax>406-444-0266</cntfax>
+        <cntemail>geoinfo@mt.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+  <Esri>
+    <PublishedDocID>{B82570EB-1D83-4E9A-BE70-922C03CBA6E7}</PublishedDocID>
+  </Esri>
+</metadata>
